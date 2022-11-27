@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 *,
 html,
 body {
@@ -7,7 +6,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -22,8 +21,7 @@ body {
     background-color: #fff;
     border-radius: 16px;
     width: 450px;
-    box-shadow: 0 0 128px rgba(0, 0, 0, .1),
-        0, 32px 64px -48px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 128px rgba(0, 0, 0, 0.1), 0, 32px 64px -48px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -52,6 +50,7 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
     border: 1px solid #f5c6cb;
+    display: none;
 }
 
 .form form .name-details {
@@ -74,7 +73,7 @@ form .name-details .field:last-child {
 }
 
 .form form .field label {
-    margin-bottom: 2px
+    margin-bottom: 2px;
 }
 
 .form form .field input {
@@ -115,7 +114,7 @@ form .name-details .field:last-child {
     cursor: pointer;
 }
 
-.form form .field i.active::before{
+.form form .field i.active::before {
     color: #333;
     content: "\f070";
 }
@@ -136,6 +135,7 @@ form .name-details .field:last-child {
 
 
 /* Users Area CSS Code */
+
 .users {
     padding: 25px 30px;
 }
@@ -154,7 +154,8 @@ form .name-details .field:last-child {
     border-radius: 50%;
 }
 
-:is(.users, .users-list) .content {
+:is(.users,
+.users-list) .content {
     display: flex;
     align-items: center;
 }
@@ -164,12 +165,14 @@ form .name-details .field:last-child {
     width: 50px;
 }
 
-:is(.users, .users-list) .details {
+:is(.users,
+.users-list) .details {
     color: #000;
     margin-left: 15px;
 }
 
-:is(.users, .users-list) .details span {
+:is(.users,
+.users-list) .details span {
     font-size: 18px;
     font-weight: 500;
 }
@@ -203,6 +206,14 @@ form .name-details .field:last-child {
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+
+.users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .users .search button {
@@ -210,11 +221,20 @@ form .name-details .field:last-child {
     height: 42px;
     border: none;
     outline: none;
-    color: #fff;
-    background: #333;
+    color: #333;
+    background: #fff;
     cursor: pointer;
     font-size: 17px;
     border-radius: 0 5px 5px 0;
+}
+
+.users .search button.active {
+    color: #fff;
+    background: #333;
+}
+
+.users .search button.active i::before {
+    content: "\f00d";
 }
 
 .users-list {
@@ -254,11 +274,14 @@ form .name-details .field:last-child {
 
 
 /* We'll use this class name in php to show offline status */
+
 .users-list a .status-dot.offline {
     color: #ccc;
 }
 
+
 /* Chat Area CSS Code */
+
 .chat-area header {
     display: flex;
     align-items: center;
@@ -286,9 +309,9 @@ form .name-details .field:last-child {
     overflow-y: auto;
     background: #f7f7f7;
     padding: 10px 30px 20px 30px;
-    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
-        inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%), inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
 }
+
 .chat-box::-webkit-scrollbar {
     width: 0;
 }
@@ -340,23 +363,23 @@ form .name-details .field:last-child {
     border-radius: 18px 18px 18px 0;
 }
 
-.chat-area .typing-area{
+.chat-area .typing-area {
     padding: 18px 30px;
     display: flex;
     justify-content: space-between;
 }
 
-.typing-area input{
+.typing-area input {
     height: 45px;
     width: calc(100% - 58px);
     font-size: 17px;
-    border : 1px solid #ccc;
-    padding: 0 13px ;
+    border: 1px solid #ccc;
+    padding: 0 13px;
     border-radius: 5px 0 0 5px;
     outline: none;
 }
 
-.typing-area button{
+.typing-area button {
     width: 55px;
     border: none;
     outline: none;
