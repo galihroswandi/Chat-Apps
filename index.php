@@ -1,52 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime Chat App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+<?php include_once 'header.php'; ?>
 
 <body>
     <div class="wrapper">
         <section class="form signUp">
             <header>Realtime Chat App</header>
-            <form action="#">
+            <form action="#" enctype="multipart/form-data">
                 <div class="error-txt">This is an error message!</div>
                 <div class="name-details">
                     <div class="field input">
-                        <label>First Name</label>
-                        <input type="text" name="" id="" placeholder="Firts Name">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="fname" id="firstName" placeholder="Firts Name" autocomplete="off">
                     </div>
                     <div class="field input">
-                        <label>Last Name</label>
-                        <input type="text" name="" id="" placeholder="Last Name">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lname" id="lastName" placeholder="Last Name" autocomplete="off">
                     </div>
                 </div>
                 <div class="field input">
-                    <label>Email Address</label>
-                    <input type="text" name="" id="" placeholder="Enter your email">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email" autocomplete="off">
                 </div>
                 <div class="field input">
-                    <label>Passwrod</label>
-                    <input type="password" name="" id="" placeholder="Enter your password">
+                    <label for="password">Passwrod</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="off">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field image">
-                    <label>Select Image</label>
-                    <input type="file">
+                    <label for="img">Select Image</label>
+                    <input type="file" id="img" name="image">
                 </div>
                 <div class="field input button">
                     <input type="submit" value="continue to chat">
                 </div>
 
             </form>
-            <div class="link">Already signed up ? <a href="#">Login Now</a></div>
+            <div class="link">Already signed up ? <a href="login.php">Login Now</a></div>
         </section>
     </div>
 
